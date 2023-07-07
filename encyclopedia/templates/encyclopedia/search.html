@@ -1,0 +1,43 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block body %}
+{% if error %}
+    <h1>{{ error }}</h1>
+{% endif %}
+{% if html %}
+<div class='header'> 
+    <form action="{% url 'wiki' title %}" method="post" >
+        <input type="hidden" name="action1" value="edit_buttn">
+        {% csrf_token %}
+        <button class="buttonSub " type="submit ">edit</button>
+    </form>
+</div>
+
+    {{html | safe}}
+{% endif %}
+
+{% if list %}
+    {% for i in list %}
+        <a href="{% url 'wiki' i %}">i</a>
+    {% endfor %}
+{% endif %}
+
+
+{% if entries %}
+    <h1>Search</h1>
+    
+    <ul>
+        {% for entry in entries %}
+        <li> <a href="{% url 'wiki' entry %}"> {{ entry }}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% if error2 %}
+    <h1>{{error2}}</h1>
+{% endif %}
+{% endblock %}

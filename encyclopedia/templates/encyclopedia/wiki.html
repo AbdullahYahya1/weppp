@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    wiki
+{% endblock %}
+
+{% block body %}
+    <div class='header'> 
+        <form action="{% url 'wiki' title %}" method="post" >
+            <input type="hidden" name="action1" value="edit_buttn">
+            {% csrf_token %}
+            <button class="buttonSub " type="submit ">edit</button>
+        </form>
+    </div>
+{% if html %}
+    {{html|safe}}
+{% else %}
+    <h1>not found</h1>    
+{% endif %}
+
+
+
+{% endblock %}

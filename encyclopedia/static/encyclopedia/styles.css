@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+textarea {
+
+    height:60vh;
+    width: 80%;
+}
+
+.main {
+    padding: 10px;
+}
+.martop{
+    margin-top: 40px;
+}
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+
+
+.newpage form label {
+    display: block;
+
+}
+.newpage form input , .newpage form textarea{ 
+    display: block;
+    margin-inline:auto; 
+    border: none;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+}
+
+.newpage form {
+    margin-top: 30px;
+
+    text-align: center;
+}
+.buttonSub{
+    background-color: rgb(37, 37, 237);
+    width: 120px ;
+    padding: 6px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    
+}
+.buttonSub:hover{
+    opacity: 0.8;
+}
+.buttonSub:active{
+    opacity: 0.5;
+}
+.header form {
+    text-align: right;
+}
+.header form button{
+    margin-right: 30px
+}

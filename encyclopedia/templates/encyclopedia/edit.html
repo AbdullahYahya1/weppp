@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block body %}
+<h1>Edit Page</h1>
+
+<div class='newpage martop' >    
+
+<form action="{% url 'edit'  %}" method="post">
+    {% csrf_token %}
+    <textarea name="html" id="" cols="30" rows="10">{{html}}</textarea>
+    <input type="text" name="title" hidden value={{title}} >
+    <button class='buttonSub'type="submit">Edit</button>
+</div>
+</form>
+{% endblock %}
